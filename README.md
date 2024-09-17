@@ -12,3 +12,5 @@ This repository contains the starter code for many different projects. They are 
 I'm not exactly sure what the staging area is. I'm assuming that I just need to make some kind of change to this repository and then reupload it? 
 Here's to hoping. 
 I made changes and pushed the information, but it's not showing at all in my github.
+
+I found my error! I had to close the commit tab to allow the git push command to work! 
