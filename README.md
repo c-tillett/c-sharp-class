@@ -8,3 +8,7 @@ This repository contains the starter code for many different projects. They are 
 * `prepare` - Starter projects for each of the preparation Learning Activities.
 * `prove` - Starter projects for each of the prove Developer projects.
 * `final` - Starter projects for final project.
+
+I'm not exactly sure what the staging area is. I'm assuming that I just need to make some kind of change to this repository and then reupload it? 
+Here's to hoping. 
+I made changes and pushed the information, but it's not showing at all in my github.
