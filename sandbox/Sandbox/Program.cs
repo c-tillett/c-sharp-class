@@ -1,51 +1,41 @@
 using System;
 using System.Diagnostics;
+using System.Diagnostics.CodeAnalysis;
 using System.Formats.Asn1;
+using System.Runtime.CompilerServices;
 
 class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Please enter the first number:");
-        string first_number = Console.ReadLine();
-        int number_one = int.Parse(first_number);
-
-        Console.WriteLine("Please enter the second number:");
-        string second_number = Console.ReadLine();
-        int number_two = int.Parse(second_number);
+        List<string> groceries = new List<string>();
+        string input = "";
+        int running = 0;
         
-        Console.WriteLine("1 = +, 2 = -, 3 = *, and 4 = /");
-        Console.WriteLine("What operation would you like to preform?");
-        string operation = Console.ReadLine();
-        float operater = int.Parse(operation);
-
-        if (operater == 1)
+        while (running == 0)
         {
-            int answer = number_one + number_two;
-            Console.WriteLine($"{number_one} plus {number_two} is {answer}");
+            Console.WriteLine("Add an item to your grocery list, or type 'done' to finish");
+            input = Console.ReadLine();
+
+            if (input == "done")
+            {
+                running = 1;
+            }
+            else
+            {
+                groceries.Add(input);
+            }
+            
+            
+           
         }
-
-        else if (operater == 2)
+        
+        Console.WriteLine($"Your grocery list is {groceries.Count} items long:");
+        
+        foreach (string item in groceries)
         {
-            int answer = number_one - number_two;
-            Console.WriteLine($"{number_one} minus {number_two} is {answer}");
-        }
-
-        else if (operater == 3)
-        {
-            int answer = number_one * number_two;
-            Console.WriteLine($"{number_one} times {number_two} is {answer}");
-        }
-
-        else if (operater == 4)
-        {
-            float answer = number_one / number_two;
-            Console.WriteLine($"{number_one} divided by {number_two} is {answer}");
-        }
-
-        else
-        {
-            Console.WriteLine("You didn't enter a valid operation! Try running the program again...I didn't want to write a loop.");
+            string correctItem = item.ToUpper();
+            Console.WriteLine($"* {correctItem}");
         }
     }
 }
