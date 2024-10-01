@@ -1,6 +1,6 @@
 using System;
 
-public class Job;
+public class Job
 {
     public string _companyName;
     public string _jobTitle;
@@ -12,3 +12,4 @@ public class Job;
         Console.WriteLine($"Spent {_endYear - _startYear} years (from {_startYear} until {_endYear}) as a {_jobTitle} at {_companyName}");
     }
 }
+
