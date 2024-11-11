@@ -1,0 +1,179 @@
+MAIN/Program
+PRINT Explaination
+    Explaination = This program has 3 activities to help you with mindfulness. Please choose one of the following options by typing one of the numbers and then pressing the Enter Key.
+CALL Loading Animation (7)
+SET input <- ""
+SET runs <- 0
+CLEAR Termnial
+LOOP input != 4
+    PRINT Menu
+        Please select from the following:
+        1) Breathing Activity
+        2) Reflection Activity
+        3) Listening Activity
+
+        4) Leave
+    IF input == 1
+        CALL Breathing Activity
+        SET runs <- runs + 1
+    ELSE IF input == 2
+        CALL Reflection Activity
+        SET runs <- runs + 1 
+    ELSE IF input == 3
+        CALL Listening
+        SET runs <- runs + 1
+    ELSE
+        CLEAR Termnial
+        PRINT Not a real number = That option is not available, please select a number 1 thorugh 4. 
+IF runs > 1
+    SET Thankyou/goodbye <- Thank you for taking some time for yourself today! You completed {runs} actvities. See you again soon!
+ELSE IF runs == 1
+    SET Thankyou/goodbye <- Thank you for taking some time for yourself today, even if it was just 1 short activity! See you again soon!
+ELSE IF runs == 0
+    SET Thankyou/goodbye <- Thank you for considering your options!
+CLEAR Termnial
+CALL Loading Animation
+PRINT Thankyou/goodbye
+CALL Loading Animation
+CLEAR Termnial
+
+ACTIVITY -- PARENT CLASS
+PRINT Welcome Statement
+    Welcome to the {name will be taken from child class} Activity!
+CALL Loading Animation
+GET number of seconds for activity
+SET Description <- ""
+PRINT goodbye Statement
+    Thank you for taking {number of seconds} to complete a short {name from child class} Activity!
+CALL Loading Animation
+[
+    LOOP for X seconds
+    PRINT -
+    WAIT .25 seconds
+    PRINT \
+    WAIT .25 seconds
+    PRINT |
+    WAIT .25 seconds
+    PRINT /
+    WAIT .25 seconds
+]
+
+BREATHING : ACTIVITY -- CHILD CLASS
+-------
+From Parent Class
+-------
+
+PRINT Welcome Statement
+    Welcome to the {Breathing} Activity!
+CALL Loading Animation (duration)
+GET number of seconds for activity
+
+-------
+
+SET Description(from parent) <- You will be prompted to breathe in, hold your breath, and then breathe out. This is intended to ground you to your surroundings, and surpess anxiety.
+PRINT Description
+PRINT
+    Clear your mind as best you can. As you breathe, breathe through your nose as much as you can. Focus on the feeling of the air entering and leaving your nostrils.
+CALL Loading Animation
+FOR number of seconds for activity
+    PRINT 
+        Breathe in ... 
+    CALL Loading Animation (4 seconds)
+    PRINT 
+        Hold ...
+    CALL Loading Animation (4)
+    PRINT
+        Breathe out ...
+    CALL Loading Animaiton (4)
+    PRINT
+        Hold...
+    CALL Loading Animaiton (4)
+-------
+From Parent Class
+-------
+
+PRINT goodbye Statement
+    Thank you for taking {number of seconds} to complete a short {name from child class} Activity!
+CALL Loading Animation
+
+-------
+
+
+REFLECTION : ACTIVITY -- CHILD CLASS
+
+-------
+From Parent Class
+-------
+
+CLEAR Termnial
+PRINT Welcome Statement
+    Welcome to the {Reflection} Activity!
+CALL Loading Animation
+GET number of seconds for activity
+
+-------
+SET Description (from parent) <- In this activity, you will be given a prompt concerning a situation to reflect on. You will have a moment to decide, and then more prompts for follow-up questions will appear.
+CALL Loading Animation (10)
+SET prompt list <- {}
+SET follow-up list <- {}
+CLEAR Termnial
+PRINT Random Prompt from list
+CALL loading animation (7)
+FOR # of seconds from user
+    IF follow-up list == empty
+        SET follow-up list <- {what it will be above}
+    ELSE
+        CLEAR Termnial
+        PRINT random follow-up from follow-up list
+        SET follow-up list <- list.delete the prompt that was selected
+        CALL loading Animation (6)
+    
+-------
+From Parent Class
+-------
+
+PRINT goodbye Statement
+    Thank you for taking {number of seconds} to complete a short {name from child class} Activity!
+CALL Loading Animation
+
+-------
+
+
+LISTENING : ACTIVITY -- CHILD CLASS
+
+-------
+From Parent Class
+-------
+
+PRINT Welcome Statement
+    Welcome to the {Breathing} Activity!
+CALL Loading Animation
+GET number of seconds for activity
+
+-------
+
+SET Description (from parent) <- In this activity, you will be given a prompt relating to gratitude and gratitude. You will then have time to list as many items relating to the prompt as you can. You then will have time to look at that list.
+PRINT Description
+CALL loading animation (10)
+PRINT 
+    Simply type what you would like to list, and then press enter.
+SET gratittude_list <- {}
+FOR number of seconds
+    CLEAR Terminal
+    GET input
+        IF input != ""
+            gratitude_list.append(input)
+        ELSE
+            CLEAR Terminal
+FOR gratittude_list.length
+    PRINT item
+
+-------
+From Parent Class
+-------
+
+PRINT goodbye Statement
+    Thank you for taking {number of seconds} to complete a short Listening Activity!
+CALL Loading Animation
+
+-------
