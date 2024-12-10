@@ -1,0 +1,66 @@
+------
+PARENT CLASS - ACTIVITY
+------
+int _timesToComplete
+int _timesCompleted
+string _activityName
+string _expUpdateMessage
+int _expFromActivity
+
+
+
+
+
+------
+CHILD CLASS - CHURCH : ACTIVITY
+------
+
+
+
+
+------
+CHILD CLASS - PRAYER : ACTIVITY
+------
+
+
+------
+CHILD CLASS - TEMPLE : ACTIVITY
+------
+
+
+
+------
+CHILD CLASS - SCRIPTURE : ACTIVITY
+------
+
+
+
+
+------
+CHILD CLASS - GIVE TALK : ACTIVITY
+------
+
+
+
+
+
+------
+CLASS - ADD EXP (exp_from_activity, current level)
+------
+int needed_exp = (level * level) + (50 * level) + 100
+int exp_before_activity = read from file
+int current_level = read from file
+int current_exp = exp_before_activity + exp_from_activity
+
+IF current_exp => needed_exp
+    PRINT [level up message]
+ELSE
+    int exp_left = needed_exp - current_exp
+    PRINT [exp gainem message -- i.e. Current level, & exp_left]
+SAVE TO FILE
+    exp_before_activity <- current_exp
+    level <- level
+
+------
+MAIN
+------
