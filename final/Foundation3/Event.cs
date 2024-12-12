@@ -57,6 +57,6 @@ public abstract class Event
     }
     public void DisplayShortDescription()
     {
-        Console.WriteLine($"This is a {GetType()} event called{Title} being, held on {Date}");
+        Console.WriteLine($"This is a {GetType()} event called {Title} being, held on {Date}");
     }
 }
