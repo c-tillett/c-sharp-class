@@ -10,6 +10,6 @@ public class Outdoor : Event
     }
     public override void DisplayFullDetails()
     {
-        Console.WriteLine($"{Title}: an {GetType()} event!\n{Description}\nJoin us on {Date} at {Time}\n{Address.CompileAddress()}\nDress for the weather!\nIt's going to be {_weather}");
+        Console.WriteLine($"{Title}: an {GetEventType()} event!\n{Description}\nJoin us on {Date} at {Time}\n{Address.CompileAddress()}\nDress for the weather!\nIt's going to be {_weather}");
     }
 }

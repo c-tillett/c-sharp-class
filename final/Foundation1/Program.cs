@@ -61,8 +61,8 @@ class Program
             video.DisplayVideo();
             int totalComments = video.GetCommentNumber();
             Console.WriteLine($"This video has {totalComments} comments:");
-            List<Comment> comments = new List<Comment>();
-            comments = video.GetComments();
+            Console.WriteLine();
+            List<Comment> comments = video.GetComments();
             foreach (Comment comment in comments)
             {
                 comment.DisplayComment();

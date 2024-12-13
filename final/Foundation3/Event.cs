@@ -46,7 +46,7 @@ public abstract class Event
     {
         _type = type;
     }
-    public string GetType()
+    public string GetEventType()
     {
         return _type;
     }
@@ -57,6 +57,6 @@ public abstract class Event
     }
     public void DisplayShortDescription()
     {
-        Console.WriteLine($"This is a {GetType()} event called {Title} being, held on {Date}");
+        Console.WriteLine($"This is a {GetEventType()} event called {Title} being, held on {Date}");
     }
 }

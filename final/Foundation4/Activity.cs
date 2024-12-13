@@ -30,8 +30,8 @@ public abstract class Activity
     public abstract double GetDistance();
     public abstract double GetSpeed();
     public abstract double GetPace();
-    public void PrintSummary()
+    public string GetSummary()
     {
-        Console.WriteLine($"{_date} {_type} ({_duration} minutes)\nDistance: {GetDistance()} miles\nSpeed: {GetSpeed()} Mph\nPace: {GetPace()} mins/mile");
+        return ($"{_date} {_type} ({_duration} minutes)\nDistance: {GetDistance()} miles\nSpeed: {GetSpeed()} Mph\nPace: {GetPace()} mins/mile");
     } 
 }

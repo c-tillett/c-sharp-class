@@ -33,7 +33,7 @@ public class Order
 
     public void PrintPackingLabel()
     {
-        Console.WriteLine($"{_customer}");
+        Console.WriteLine($"{_customer.CustomerName}");
         foreach (Product product in _productList)
         {
             Console.WriteLine(product.FormatProductInfo());
@@ -42,8 +42,8 @@ public class Order
 
     public void PrintShippingLabel()
     {
-        string name = _customer.customerName;
-        string compiledAddress = _customer.address.CompileAddress();
+        string name = _customer.CustomerName;
+        string compiledAddress = _customer.CustomerAddress.CompileAddress();
         Console.WriteLine($"{name}\n{compiledAddress}");
     }
 }

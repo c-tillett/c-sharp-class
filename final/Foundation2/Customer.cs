@@ -9,24 +9,18 @@ public class Customer
         _name = name;
         _address = address;
     }
-    public string customerName
+    public string CustomerName
     {
         get {return _name;}
         set {_name = value;}
     }
-    public Address address
+    public Address CustomerAddress
     {
         get {return _address;}
         set {_address = value;}
     }
-    public void DisplayCustomerInfo()
-    {
-        Console.WriteLine($"{_name}");
-        Console.WriteLine($"{_address}");
-    }
-
     public bool checkCustomerCountry()
     {
-        return address.CheckCountry();
+        return CustomerAddress.CheckCountry();
     }
 }

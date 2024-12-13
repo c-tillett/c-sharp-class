@@ -12,6 +12,6 @@ public class Lecture : Event
     }
     public override void DisplayFullDetails()
     {
-        Console.WriteLine($"{Title} a {GetType()} by {_speaker} on\n{Date} at {Time}\n{Address.CompileAddress()}\nGet tickets now, as there are only {_maxCapacity} seats available!");
+        Console.WriteLine($"{Title} a {GetEventType()} by {_speaker} on\n{Date} at {Time}\n{Address.CompileAddress()}\nGet tickets now, as there are only {_maxCapacity} seats available!");
     }
 }

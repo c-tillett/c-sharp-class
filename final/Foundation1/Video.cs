@@ -26,8 +26,7 @@ public class Video
     }
     public List<Comment> GetComments()
     {
-        List<Comment> commentList = new List<Comment>();
-        commentList = _commentList;
+        List<Comment> commentList = _commentList;
         return commentList;
     }
     public void DisplayVideo()

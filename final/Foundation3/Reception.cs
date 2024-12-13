@@ -13,6 +13,6 @@ public class Reception : Event
     }
     public override void DisplayFullDetails()
     {
-        Console.WriteLine($"This is a {GetType()} event\n{Title}\n{Description}\n{Date} at {Time}\n{Address.CompileAddress()}\n\nPlease RSVP to {_RSVPemail} by {_RSVPdeadline}");
+        Console.WriteLine($"This is a {GetEventType()} event\n{Title}\n{Description}\n{Date} at {Time}\n{Address.CompileAddress()}\n\nPlease RSVP to {_RSVPemail} by {_RSVPdeadline}");
     }
 }

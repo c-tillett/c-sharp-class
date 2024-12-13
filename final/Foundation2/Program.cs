@@ -12,7 +12,7 @@ class Program
 
         Product pilotG2Pen = new Product("Pilot G2 Pens - .32 mm Black ink", 50, 4.27, 0);
         Product webcam = new Product("Logitech 1080p USB Webcam", 1, 75, 1);
-        Product legalPadMini = new Product("Stapels Legal Pad mini - White 5*8 inches", 25, 1.2, 1);
+        Product legalPadMini = new Product("Stapels Legal Pad mini - White 5*8 inches", 25, 1.2, 2);
         Product postIts = new Product("Post-It's Sticky notes - Pink", 5, 2.12, 3);
         Product paperclips = new Product("Stapels paperclips - box of 100", 3, 2.67, 4);
 

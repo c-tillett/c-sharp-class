@@ -6,11 +6,6 @@ public class Product
     private int _productQuantity;
     private double _productCost;
     private int _productID;
-    public int pdoductID
-    {
-        get {return _productID;}
-        set {_productID = value;}
-    }
 
     public Product(string productName, int productQuantity, double productCost, int productID)
     {
